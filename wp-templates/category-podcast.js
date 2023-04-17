@@ -11,7 +11,6 @@ import {
   Post,
   FeaturedImage,
   SEO,
-  PodcastTheme,
 } from "../components";
 
 export default function Component(props) {
@@ -32,9 +31,7 @@ export default function Component(props) {
       <Main>
         <>
           <EntryHeader title={`Categoría: ${name}`} />
-
           <Container>
-            {name === "Pódcast" ? <PodcastTheme /> : ""}
             {posts.edges.map((post) => (
               <Post
                 title={post.node.title}
