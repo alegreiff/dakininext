@@ -30,10 +30,11 @@ export default function Component(props) {
       />
       <Main>
         <>
-          <EntryHeader title={`Categoría: ${name}`} />
+          <EntryHeader title={`CategoríaPos: ${name}`} />
           <Container>
-            {posts.edges.map((post) => (
+            {posts.edges.map((post, i) => (
               <Post
+                key={i}
                 title={post.node.title}
                 content={post.node.content}
                 date={post.node.date}

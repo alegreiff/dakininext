@@ -1,6 +1,6 @@
-import { gql } from '@apollo/client';
-import * as MENUS from '../constants/menus';
-import { BlogInfoFragment } from '../fragments/GeneralSettings';
+import { gql } from "@apollo/client";
+import * as MENUS from "../constants/menus";
+import { BlogInfoFragment } from "../fragments/GeneralSettings";
 import {
   Header,
   Footer,
@@ -11,7 +11,7 @@ import {
   ContentWrapper,
   FeaturedImage,
   SEO,
-} from '../components';
+} from "../components";
 
 export default function Component(props) {
   // Loading state for previews
@@ -45,6 +45,7 @@ export default function Component(props) {
             date={date}
             author={author?.node?.name}
           />
+          <h5>ESTA ES LA ENTRADA SINGLE</h5>
           <Container>
             <ContentWrapper content={content} />
           </Container>
@@ -93,6 +94,7 @@ Component.query = gql`
 `;
 
 Component.variables = ({ databaseId }, ctx) => {
+  console.log("VARRSS", databaseId);
   return {
     databaseId,
     headerLocation: MENUS.PRIMARY_LOCATION,
