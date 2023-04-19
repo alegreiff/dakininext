@@ -94,7 +94,7 @@ Component.query = gql`
 `;
 
 Component.variables = ({ databaseId }, ctx) => {
-  console.log("VARRSS", databaseId);
+  console.log("VARRSS", { ctx });
   return {
     databaseId,
     headerLocation: MENUS.PRIMARY_LOCATION,

@@ -32,7 +32,7 @@ export default function Component() {
       <Main>
         <Container>
           <h2>Probando de nuevo BIS</h2>
-          <Hero title={"Front Page"} />
+          <Hero title={"D A K I N I"} />
           <div className="text-center">
             <p>This page is utilizing the "front-page" WordPress template.</p>
             <code>wp-templates/front-page.js</code>
